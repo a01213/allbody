@@ -74,7 +74,7 @@
     </head>
 <body>
     <section class="scene one">
-    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="fontello-d7310d20/css/fontello.css">
         <header>
             <img src="logo2.png" width="80px">
             <h1>
@@ -111,46 +111,93 @@
                 SNS
             </h1>
             <style>
-                #header .icons{
+                #icons{
                     list-style: none;
+                    padding:0;
+                    
                 }
-                #header .icons li{
-                    display: inline-block;
-                    border:1px solid white;
-                    border-radius:100%;
-                    padding: 0.2rem;
+                #icons li{
+                    display:inline-block;
+                    border:1px solid rgba(255, 255, 255, 0.54);
+                    border-radius: 100%;
+                    background-color: rgba(255, 255, 255, 0.1);
+                    
                 }
-                #header .icons a{
-                    text-decoration: none;
+                #icons a{
+                    text-decoration:none;
                     color:white;
                     display: inline-block;
-                    margin: 0 auto
+                    margin:0 auto;
                     display: flex;
-                    justify-content :center;
-                    align-items: center;
-                    padding: 0.2rem;
+                    justify-content: center;
+                    align-items:  center;
+                    padding: 0.5rem;
                 }
-                #header .icons a:before{
-                    width:1.5rem;
-                    height:1.5rem;
-                    padding:0;
+                #icons a:before{
+                  
+                    margin:0;
                 }
-                #header .icons .label{
+                #icons .label{
                     display: none;
                 }
+                
             </style>
-            <ul class="icons">
-                <li></li><a href='#' class="icon-instagram"><span class="lavel">Instagram</span></a></li>
-                <li></li><a href='#' class="icon-blog"><span class="lavel">Blog</span></a></li>
+            <ul id="icons">
+                <li><a href='https://www.instagram.com/allbody_jeju/' target="_black" class="icon-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href='https://blog.naver.com/yoobong012' target="_black" class="icon-vkontakte"><span class="label">Blog</span></a></li>
             </ul>
         </header>
     </section>
     <section class="scene four">
         <header>
             <h1>
-                Allbody Pilates
+                Location
             </h1>
-            We do pilates for All Body
+            제주시 서광로 256 청아빌딩 3층 올바디필라테스
+            <div id="map" style="width:100%;height:350px;"></div>
+<p><em>마커에 마우스 커서를 올려주세요!</em></p> 
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=84ee5baf58f3d419c19fc28519264688"></script>
+<script>
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new daum.maps.LatLng(33.4995919, 126.52399500000001), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+
+var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+// 마커를 표시할 위치입니다 
+var position =  new daum.maps.LatLng(33.4995919, 126.52399500000001);
+
+// 마커를 생성합니다
+var marker = new daum.maps.Marker({
+  position: position
+});
+
+// 마커를 지도에 표시합니다.
+marker.setMap(map);
+
+// 마커에 커서가 오버됐을 때 마커 위에 표시할 인포윈도우를 생성합니다
+var iwContent = '<div style="padding:5px;">올바디 필라테스</div>'; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+
+// 인포윈도우를 생성합니다
+var infowindow = new daum.maps.InfoWindow({
+    content : iwContent
+});
+
+// 마커에 마우스오버 이벤트를 등록합니다
+daum.maps.event.addListener(marker, 'mouseover', function() {
+  // 마커에 마우스오버 이벤트가 발생하면 인포윈도우를 마커위에 표시합니다
+    infowindow.open(map, marker);
+});
+
+// 마커에 마우스아웃 이벤트를 등록합니다
+daum.maps.event.addListener(marker, 'mouseout', function() {
+    // 마커에 마우스아웃 이벤트가 발생하면 인포윈도우를 제거합니다
+    infowindow.close();
+});
+</script>
         </header>
     </section>
     <section class="scene five">
