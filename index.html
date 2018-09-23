@@ -20,6 +20,7 @@
                 display: block;
                 background-attachment: fixed;
             }
+            
             .scene header{
                 color:white;
                 max-width:80;      
@@ -69,14 +70,16 @@
           #explain{
               line-height: 2rem;
               font-size: 15px;
+              display:grid;
+              grid-template-columns:1fr 1fr;
           }
-          footer{
-            border:5px solid white;
+          #subject{
+              display:grid;
+              grid-template-columns:1fr 1fr;
           }
         </style>
     </head>
 <body>
-    
     <section class="scene one">
     <link rel="stylesheet" href="fontello-d7310d20/css/fontello.css">
         <header>
@@ -86,6 +89,7 @@
             </h1>
             We do pilates for All Body
         </header>
+       
     </section>
     <section class="scene two">
             <header>
@@ -93,10 +97,15 @@
                     모두를 위한 시작<br>
                     올바디 대표 최유미입니다.
                 </h1>
-
-                <h2>자격 밎 수료</h2><br>
+                <div id="subject">
+                <h2>자격 밎 수료</h2>         
+                <h2>경력사항</h2><br>
+                </div>
                 <div id="explain">
-                논문저술) 족관절에 대한 멀리건기법과 관절유동술이 노인의 균형수행력에 미치는 영향<br>
+                
+                
+                <div id="s1">
+                <p>논문저술) 족관절에 대한 멀리건기법과 관절유동술이 노인의 균형수행력에 미치는 영향<br>
                 대한 물리치료사 협회 정회원<br>
                 대한 고유수용선 신경근 촉진법PNF 학회 정회원pNF Basic,Part AB, Level 1,2 이수<br>
                 모던필라테스 fitness trainer /rehabilitation trainer course 이수<br>
@@ -106,7 +115,17 @@
                 Rehabilitation Pilates course 이수 (RMR1/RMR2)<br>
                 Zenga : Mat / Equipment / V2 max plus reformer vinyasa
                 Total barre : Foundation / Endurance<br>
-                Yoga Alliance UK : 국제요가강사과정 200hr 이수 (인도 리쉬케쉬)
+                Yoga Alliance UK : 국제요가강사과정 200hr 이수 (인도 리쉬케쉬)</p></div>
+                
+                <div id="s2">
+                <p>국립재활병원 뇌졸중 / 척수손상과 물리치료사 <br>
+                 서울 잠실 Pilates M studio<br>
+                서울 고려대학교 100일간의 필라테스<br>
+                서울 한남동 Pilates In motion<br>
+                제주 밸런싱요가 아라점 기구필라테스<br>
+                현) MPA 국제필라테스 제주교육관
+                지도자과정 교육담당<br>
+                현) 올바디 필라테스 원장</p></div>
             </div>
             </header>
      </section>
@@ -220,5 +239,6 @@
             We do pilates for All Body
         </header>
     </section>
+    
 </body>
 </html>
